@@ -5,10 +5,18 @@ DrevoGo is ...
 ## Prerequisite
 
 When using VSCode, install `prettier` and `ESLint` extensions.
-Configure VSCode to use prettier editor on save
+Configure VSCode to use prettier editor on save:
 
-```
-editor.formatOnSave": false
+1. Press Ctrl/Cmd + Shift + P
+2. Type "settings"
+3. Choose "Preferences: Open User Settings (JSON)"
+4. Add next lines
+
+```json
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true
+}
 ```
 
 ## Running the app
