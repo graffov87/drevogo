@@ -41,6 +41,6 @@
     "pre-commit": "npx lint-staged"
   },
   "lint-staged": {
-    "*": "eslint --cache --fix"
+    "*": "eslint --fix"
   }
 }
