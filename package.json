@@ -6,7 +6,8 @@
     "start": "vite",
     "build": "tsc && vite build",
     "test": "vitest",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepare": "npx simple-git-hooks"
   },
   "dependencies": {
     "react": "^18.2.0",
