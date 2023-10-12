@@ -6,7 +6,7 @@ export default class Parsing {
     console.log(obj.getExample());
   }
 
-  findHead() {
+  findHeadTest() {
     console.log("COOl");
   }
 }
