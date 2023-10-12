@@ -5,4 +5,8 @@ export default class Parsing {
     const obj = new ExampleGed();
     console.log(obj.getExample());
   }
+
+  findHead() {
+    console.log("COOl");
+  }
 }
