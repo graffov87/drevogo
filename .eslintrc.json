@@ -18,6 +18,7 @@
   },
   "plugins": ["@typescript-eslint", "react", "react-hooks", "prettier"],
   "rules": {
+    "camelcase": "error",
     "prettier/prettier": ["error"],
     "react/prop-types": "off",
     "@typescript-eslint/no-unused-vars": "warn",
