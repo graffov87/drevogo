@@ -1,4 +1,4 @@
-import Parsing from "../library/gedcom/src/Paring";
+import Parsing from "../../library/gedcom/src/Paring";
 
 const Uploader = () => {
   const parse = () => {
