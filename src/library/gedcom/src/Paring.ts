@@ -1,12 +1,16 @@
 import ExampleGed from "../example/ExampleGed";
-
+import lineValidation from "./lineValidation";
 export default class Parsing {
   parseFile() {
     const obj = new ExampleGed();
-    console.log(obj.getExample());
+    const lines = obj.getExample().split("\n");
+    this.paseLines(lines);
   }
 
-  findHeadTest() {
-    console.log("COOl");
+  paseLines(lines: string[]): void {
+    const valid = new lineValidation();
+    lines.forEach((line) => {
+      console.log(valid.valid(line));
+    });
   }
 }
