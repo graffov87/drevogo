@@ -1,3 +1,1 @@
-export default function maxLength(line: string): boolean {
-  return Boolean(line.length <= 255);
-}
+export default (line: string): boolean => Boolean(line.length <= 255);

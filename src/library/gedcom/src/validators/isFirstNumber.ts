@@ -1,3 +1,1 @@
-export default function isFirstNumber(line: string): boolean {
-  return Boolean(Number.isInteger(Number.parseFloat(line[0])));
-}
+export default (line: string): boolean => Boolean(Number.isInteger(Number.parseFloat(line[0])));

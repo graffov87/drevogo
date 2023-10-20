@@ -1,3 +1,1 @@
-export default function isEmpty(line: string): boolean {
-  return Boolean(line.trim().length > 0);
-}
+export default (line: string): boolean => Boolean(line.trim().length > 0);
