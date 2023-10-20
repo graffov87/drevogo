@@ -3,7 +3,7 @@ import * as validators from "./validators";
 export default class lineValidation {
   listOfValidators: string[];
   constructor() {
-    this.listOfValidators = ["isEmpty", "maxLength", "isFirstNumber"];
+    this.listOfValidators = ["isEmpty", "isMaxLength", "isFirstNumber"];
   }
   valid(line: string): boolean {
     let isValid: boolean = true;
@@ -11,7 +11,7 @@ export default class lineValidation {
       const callValidator = this.listOfValidators[i];
       if (validators[callValidator as keyof typeof validators](line) == false) {
         isValid = false;
-        break; //lovi govnokod))
+        break;
       }
     }
 
