@@ -1,1 +1,1 @@
-export default (line: string): boolean => Boolean(line.trim().length > 0);
+export default (line: string): boolean => !(line.trim().length > 0);

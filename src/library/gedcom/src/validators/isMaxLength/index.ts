@@ -1,1 +1,1 @@
-export default (line: string): boolean => Boolean(line.length <= 255);
+export default (line: string): boolean => !(line.length <= 255);
