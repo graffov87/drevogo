@@ -7,7 +7,7 @@ export default class lineValidation {
    * Set Validators
    */
   constructor() {
-    this.listOfValidators = ["isEmpty", "isMaxLength", "isFirstNumber"];
+    this.listOfValidators = ["isNotEmpty", "isMaxLength", "isFirstNumber"];
   }
 
   /**

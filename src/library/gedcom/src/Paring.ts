@@ -57,10 +57,10 @@ export default class Parsing {
             prevObj = {};
           }
         } else if (firstChar > 0) {
-          const headLine = detailLine[1];
+          /*    const headLine = detailLine[1];
           const transFormal = FORMAL_NAMES[headLine];
           const name = transFormal != undefined ? transFormal : detailLine[1];
-          prevObj[name] = detailLine[2] != undefined ? detailLine[2] : "";
+          prevObj[name] = detailLine[2] != undefined ? detailLine[2] : "";*/
         }
         prevNumber = firstChar;
       }
