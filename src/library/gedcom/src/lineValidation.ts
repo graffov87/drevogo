@@ -7,7 +7,7 @@ export default class lineValidation {
    * Set Validators
    */
   constructor() {
-    this.listOfValidators = ["isEmpty", "maxLength", "isFirstNumber"];
+    this.listOfValidators = ["isEmpty", "isMaxLength", "isFirstNumber"];
   }
 
   /**
@@ -22,7 +22,7 @@ export default class lineValidation {
       const callValidator = this.listOfValidators[i];
       if (validators[callValidator as keyof typeof validators](line) == false) {
         isValid = false;
-        break; //lovi govnokod))
+        break;
       }
     }
 
