@@ -2,7 +2,7 @@ import { describe, it, expect } from "vitest";
 
 import func from ".";
 
-describe("isEmpty", () => {
+describe("isNotEmpty", () => {
   it("Should be true if string is empty", () => {
     expect(func("")).toBeTruthy();
   });
