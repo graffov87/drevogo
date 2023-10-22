@@ -326,7 +326,6 @@ class ExampleGed {
 2 TITL Alla
 2 _POSITION 5 0 308 404
 2 _PHOTO_RIN MH:P500109
-0 @I8@ INDI
 0 TRLR
 `;
   }

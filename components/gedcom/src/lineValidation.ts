@@ -1,31 +1,16 @@
 import * as validators from "./validators";
 
-export default class lineValidation {
-  listOfValidators: string[];
+export default (line: string): boolean => {
+  const listOfValidators = ["isNotEmpty", "isMaxLength", "isFirstNumber"];
+  let isValid: boolean = true;
 
-  /**
-   * Set Validators
-   */
-  constructor() {
-    this.listOfValidators = ["isNotEmpty", "isMaxLength", "isFirstNumber"];
-  }
-
-  /**
-   * Using Validators for the line
-   *
-   * @param line
-   * @returns
-   */
-  valid(line: string): boolean {
-    let isValid: boolean = true;
-    for (let i = 0; i < this.listOfValidators.length; i++) {
-      const callValidator = this.listOfValidators[i];
-      if (validators[callValidator as keyof typeof validators](line) == false) {
-        isValid = false;
-        break;
-      }
+  for (let i = 0; i < listOfValidators.length; i++) {
+    const callValidator = listOfValidators[i];
+    if (validators[callValidator as keyof typeof validators](line) == false) {
+      isValid = false;
+      break;
     }
-
-    return isValid;
   }
-}
+
+  return isValid;
+};
