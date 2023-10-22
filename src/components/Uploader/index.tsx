@@ -2,8 +2,7 @@ import Parsing from "@components/gedcom/src/paring";
 
 const Uploader = () => {
   const parse = () => {
-    const object = new Parsing();
-    object.parseFile();
+    Parsing();
   };
   return (
     <>
