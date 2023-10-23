@@ -1,5 +1,5 @@
 import ExampleGed from "../example/ExampleGed";
-import lineValidation from "./lineValidation";
+import isValid from "./isValid";
 import { FORMAL_NAMES } from "./names";
 
 interface StringMap {
@@ -53,7 +53,7 @@ const paseLines = (lines: string[]): void => {
   let prevName: string = "";
   let prevValue: string = "";
   lines.forEach((line) => {
-    if (lineValidation(line)) {
+    if (isValid(line)) {
       const detailLine = parseline(line);
       const firstChar = Number(detailLine[0]);
       const headLine = detailLine[1];
