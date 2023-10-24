@@ -53,33 +53,32 @@ const paseLines = (lines: string[]): void => {
   let prevName: string = "";
   let prevValue: string = "";
   lines.forEach((line) => {
-    if (isValid(line)) {
-      const detailLine = parseline(line);
-      const firstChar = Number(detailLine[0]);
-      const headLine = detailLine[1];
-      if (firstChar == 0) {
-        const isEmpty = Object.keys(prevObj).length === 0;
-        if (!isEmpty) {
-          linesObj.push(prevObj);
-          const lineId = getId(headLine);
-          if (lineId != null) prevObj = { id: lineId };
-        }
-      } else if (firstChar > 0) {
-        const transFormal = FORMAL_NAMES[headLine as keyof typeof FORMAL_NAMES];
-        if (firstChar == 1) {
-          innerObj = prevObj;
-        } else if (firstChar > 1 && prevNumber != firstChar) {
-          if (typeof innerObj[prevName] === "string") {
-            innerObj[prevName] = { value: prevValue };
-          }
-          innerObj = innerObj[prevName] as StringMap;
-        }
-        prevName = transFormal != undefined ? transFormal : detailLine[1];
-        prevValue = detailLine[2] != undefined ? detailLine[2] : "";
-        addFields(innerObj, prevName, prevValue);
+    if (!isValid(line)) return;
+    const detailLine = parseline(line);
+    const firstChar = Number(detailLine[0]);
+    const headLine = detailLine[1];
+    if (firstChar == 0) {
+      const isEmpty = Object.keys(prevObj).length === 0;
+      if (!isEmpty) {
+        linesObj.push(prevObj);
+        const lineId = getId(headLine);
+        if (lineId != null) prevObj = { id: lineId };
       }
-      prevNumber = firstChar;
+    } else if (firstChar > 0) {
+      const transFormal = FORMAL_NAMES[headLine as keyof typeof FORMAL_NAMES];
+      if (firstChar == 1) {
+        innerObj = prevObj;
+      } else if (firstChar > 1 && prevNumber != firstChar) {
+        if (typeof innerObj[prevName] === "string") {
+          innerObj[prevName] = { value: prevValue };
+        }
+        innerObj = innerObj[prevName] as StringMap;
+      }
+      prevName = transFormal != undefined ? transFormal : detailLine[1];
+      prevValue = detailLine[2] != undefined ? detailLine[2] : "";
+      addFields(innerObj, prevName, prevValue);
     }
+    prevNumber = firstChar;
   });
   console.log(linesObj);
 };

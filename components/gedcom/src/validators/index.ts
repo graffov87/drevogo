@@ -1,3 +1,3 @@
-export { default as isNotEmpty } from "./isNotEmpty";
-export { default as isMaxLength } from "./isMaxLength";
-export { default as isFirstNumber } from "./isFirstNumber";
+export { default as validatorA } from "./isNotEmpty";
+export { default as validatorB } from "./isMaxLength";
+export { default as validatorC } from "./isFirstNumber";
